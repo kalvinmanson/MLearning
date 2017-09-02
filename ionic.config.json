@@ -1,6 +1,8 @@
 {
   "name": "MLearning",
-  "app_id": "",
+  "app_id": "e9992dec",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }

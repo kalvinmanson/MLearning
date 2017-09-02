@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { TextToSpeech } from '@ionic-native/text-to-speech';
 
 /**
  * Generated class for the SilabaPage page.
@@ -15,11 +16,27 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SilabaPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+	syllable: string = "";
+	letters: string[];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private tts: TextToSpeech) {
+  	
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SilabaPage');
   }
 
+  describe() {
+
+  	this.tts.speak('Hello World')
+  		.then(() => console.log('Success'))
+  		.catch((reason: any) => console.log(reason));
+  		
+  	this.letters = this.syllable.split('');
+  	console.log(this.letters);
+  }
+  readLetter(letter) {
+  	console.log(letter);
+  }
 }

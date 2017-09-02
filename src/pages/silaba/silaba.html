@@ -14,6 +14,19 @@
 
 
 <ion-content padding>
-	<h1>Hola mundo</h1>
+
+	<ion-list>
+	  <ion-item>
+	    <ion-label stacked>Syllable</ion-label>
+	    <ion-input [(ngModel)]="syllable"></ion-input>
+	  </ion-item>
+  	</ion-list>
+  	<button ion-button round (click)="describe()">Primary Round</button>
+
+  	<ion-list>
+	  <button ion-item *ngFor="let letter of letters" (click)="readLetter(letter)">
+	    {{ letter }}
+	  </button>  
+	</ion-list>
 
 </ion-content>

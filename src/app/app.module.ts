@@ -10,6 +10,8 @@ import { SilabaPage } from '../pages/silaba/silaba';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { TextToSpeech } from '@ionic-native/text-to-speech';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -31,6 +33,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    TextToSpeech,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
