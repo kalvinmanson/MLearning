@@ -21,7 +21,7 @@
 	    <ion-input [(ngModel)]="syllable"></ion-input>
 	  </ion-item>
   	</ion-list>
-  	<button ion-button round (click)="describe()">Primary Round</button>
+  	<button ion-button round (click)="describe()">Describe your word</button>
 
   	<ion-list>
 	  <button ion-item *ngFor="let letter of letters" (click)="readLetter(letter)">

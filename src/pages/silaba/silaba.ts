@@ -32,11 +32,13 @@ export class SilabaPage {
   	this.tts.speak('Hello World')
   		.then(() => console.log('Success'))
   		.catch((reason: any) => console.log(reason));
-  		
+
   	this.letters = this.syllable.split('');
   	console.log(this.letters);
   }
   readLetter(letter) {
-  	console.log(letter);
+  	this.tts.speak(letter)
+  		.then(() => console.log('Success'))
+  		.catch((reason: any) => console.log(reason));
   }
 }
