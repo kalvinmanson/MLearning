@@ -29,7 +29,7 @@ export class SilabaPage {
 
   describe() {
 
-  	this.tts.speak('Hello World')
+  	this.tts.speak(this.syllable)
   		.then(() => console.log('Success'))
   		.catch((reason: any) => console.log(reason));
 
