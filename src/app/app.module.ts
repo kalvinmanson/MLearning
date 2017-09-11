@@ -4,8 +4,9 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { DatosPage } from '../pages/datos/datos';
 import { SilabaPage } from '../pages/silaba/silaba';
+import { FacebookPage } from '../pages/facebook/facebook';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -16,8 +17,9 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
-    SilabaPage
+    DatosPage,
+    SilabaPage,
+    FacebookPage
   ],
   imports: [
     BrowserModule,
@@ -27,8 +29,9 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
-    SilabaPage
+    DatosPage,
+    SilabaPage,
+    FacebookPage
   ],
   providers: [
     StatusBar,
