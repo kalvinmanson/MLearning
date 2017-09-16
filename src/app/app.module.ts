@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { DatosPage } from '../pages/datos/datos';
 import { SilabaPage } from '../pages/silaba/silaba';
 import { FacebookPage } from '../pages/facebook/facebook';
+import { TablasPage } from '../pages/tablas/tablas';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,7 +20,8 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
     HomePage,
     DatosPage,
     SilabaPage,
-    FacebookPage
+    FacebookPage,
+    TablasPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
     HomePage,
     DatosPage,
     SilabaPage,
-    FacebookPage
+    FacebookPage,
+    TablasPage
   ],
   providers: [
     StatusBar,

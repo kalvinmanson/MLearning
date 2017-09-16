@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { DatosPage } from '../pages/datos/datos';
 import { SilabaPage } from '../pages/silaba/silaba';
 import { FacebookPage } from '../pages/facebook/facebook';
+import { TablasPage } from '../pages/tablas/tablas';
 
 @Component({
   templateUrl: 'app.html'
@@ -26,7 +27,8 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'Datos', component: DatosPage },
       { title: 'Silaba', component: SilabaPage },
-      { title: 'Facebook', component: FacebookPage }
+      { title: 'Facebook', component: FacebookPage },
+      { title: 'Tablas', component: TablasPage }
     ];
 
   }
