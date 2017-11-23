@@ -8,6 +8,9 @@ import { DatosPage } from '../pages/datos/datos';
 import { SilabaPage } from '../pages/silaba/silaba';
 import { FacebookPage } from '../pages/facebook/facebook';
 import { TablasPage } from '../pages/tablas/tablas';
+import { AsistenciaPage } from '../pages/asistencia/asistencia';
+import { AgendaPage } from '../pages/agenda/agenda';
+import { JuegoPage } from '../pages/juego/juego';
 
 @Component({
   templateUrl: 'app.html'
@@ -28,7 +31,10 @@ export class MyApp {
       { title: 'Datos', component: DatosPage },
       { title: 'Silaba', component: SilabaPage },
       { title: 'Facebook', component: FacebookPage },
-      { title: 'Tablas', component: TablasPage }
+      { title: 'Tablas', component: TablasPage },
+      { title: 'Asistencia', component: AsistenciaPage },
+      { title: 'Agenda', component: AgendaPage },
+      { title: 'Juego', component: JuegoPage }
     ];
 
   }

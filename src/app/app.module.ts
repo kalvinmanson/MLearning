@@ -8,11 +8,15 @@ import { DatosPage } from '../pages/datos/datos';
 import { SilabaPage } from '../pages/silaba/silaba';
 import { FacebookPage } from '../pages/facebook/facebook';
 import { TablasPage } from '../pages/tablas/tablas';
+import { AsistenciaPage } from '../pages/asistencia/asistencia';
+import { AgendaPage } from '../pages/agenda/agenda';
+import { JuegoPage } from '../pages/juego/juego';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TextToSpeech } from '@ionic-native/text-to-speech';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -21,11 +25,15 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
     DatosPage,
     SilabaPage,
     FacebookPage,
-    TablasPage
+    TablasPage,
+    AsistenciaPage,
+    AgendaPage,
+    JuegoPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot(),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -34,7 +42,10 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
     DatosPage,
     SilabaPage,
     FacebookPage,
-    TablasPage
+    TablasPage,
+    AsistenciaPage,
+    AgendaPage,
+    JuegoPage
   ],
   providers: [
     StatusBar,

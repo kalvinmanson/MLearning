@@ -1,0 +1,66 @@
+<!--
+  Generated template for the AgendaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+  	<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Agenda</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-item>
+	  <ion-label>Fecha</ion-label>
+	  <ion-datetime displayFormat="MM/DD/YYYY" pickerFormat="MM/DD/YYYY" (ngModelChange)="changeDay($event)" [(ngModel)]="day"></ion-datetime>
+	</ion-item>
+
+	<ion-card *ngFor="let event of eventsDay">
+	  <ion-card-content>
+	  	<p><small>{{ event.course }} ({{ event.day }})</small></p>
+	    <ion-card-title>
+	      {{ event.name}}
+	      </ion-card-title>
+	    <p>
+	      {{ event.description }}
+	    </p>
+	  </ion-card-content>
+	</ion-card>
+
+	<ion-card>
+	  <ion-card-header>
+	    Agregar tarea
+	  </ion-card-header>
+	  <ion-card-content>
+	    <ion-item>
+		  <ion-label fixed>Titulo</ion-label>
+		  <ion-input type="text" [(ngModel)]="name"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label>Área</ion-label>
+			<ion-select [(ngModel)]="course">
+			  <ion-option value="Lenguaje">Lenguaje</ion-option>
+			  <ion-option value="Matemáticas">Matemáticas</ion-option>
+			  <ion-option value="Ciencia Naturales">Ciencia Naturales</ion-option>
+			  <ion-option value="Ciencia Sociale">Ciencia Sociales</ion-option>
+			  <ion-option value="Ingles">Ingles</ion-option>
+			</ion-select>
+		  </ion-item>
+		<ion-item>
+		  <ion-label stacked>Descripción</ion-label>
+		  <ion-textarea [(ngModel)]="description"></ion-textarea>
+		</ion-item>
+		<ion-item>
+			<button ion-button (click)="addEvent()">Agregar</button>
+		</ion-item>
+	  </ion-card-content>
+	</ion-card>
+
+</ion-content>

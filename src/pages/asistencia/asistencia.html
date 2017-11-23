@@ -1,0 +1,46 @@
+<!--
+  Generated template for the AsistenciaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+  	<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Asistencia</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+	<ion-item>
+	  <ion-label>Fecha</ion-label>
+	  <ion-datetime displayFormat="MM/DD/YYYY" pickerFormat="MM/DD/YYYY" [(ngModel)]="day"></ion-datetime>
+	</ion-item>
+
+	<ion-list inset>
+	  <button ion-item  *ngFor="let student of students" (click)="confirmStudent(student)">
+	    <ion-icon *ngIf="isAsist(student)" name="star"></ion-icon>
+	    {{ student }}
+	  </button> 
+	</ion-list>
+
+
+	<ion-card>
+	  <ion-card-header>
+	    Nuevo Estudiante
+	  </ion-card-header>
+	  <ion-card-content>
+	    <ion-item>
+		  <ion-label fixed>Nombre</ion-label>
+		  <ion-input type="text" [(ngModel)]="name"></ion-input>
+		</ion-item>
+		<ion-item>
+			<button ion-button (click)="addStudent()">Agregar</button>
+		</ion-item>
+	  </ion-card-content>
+	</ion-card>
+</ion-content>
